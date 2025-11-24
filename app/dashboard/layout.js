@@ -3,10 +3,9 @@ import Appsidebar from "../components/Appsidebar"
 
 export default function Layout({ children }) {
   return (
-    <SidebarProvider>
+    <SidebarProvider className="border-black">
       <Appsidebar />
-      <main>
-        <SidebarTrigger className={"cursor-pointer"} />
+      <main className="flex-1 w-full">
         {children}
       </main>
     </SidebarProvider>

@@ -24,7 +24,7 @@ Object.defineProperty(window, 'matchMedia', {
       
       expect(await screen.findByText('Search Flights')).toBeInTheDocument()
       expect(await screen.findByText('My Vault')).toBeInTheDocument()
-      expect(await screen.findByText('Donate')).toBeInTheDocument()
+      expect(await screen.findByText('Support')).toBeInTheDocument()
       expect(await screen.findByText('Contact')).toBeInTheDocument()
       expect(await screen.findByText('Sign Out')).toBeInTheDocument()
     })

@@ -9,11 +9,13 @@ import { IoPlanet } from "react-icons/io5";
 import { SidebarMenuButton, SidebarMenuItem, SidebarMenu } from "../../components/ui/sidebar";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { MdDashboard } from "react-icons/md";
+
 
 const items = [
     { label: "Search Flights", icon: <IoMdAirplane className="text-red-400"></IoMdAirplane>, href: "/dashboard/search" },
     { label: "My Vault", icon: <PiVaultBold className="text-green-500"></PiVaultBold>, href: "/dashboard/vault" },
-    { label: "Donate", icon: <FaBitcoin className="text-yellow-400"></FaBitcoin>, href: "/dashboard/donate" },
+    { label: "Support", icon: <FaBitcoin className="text-yellow-400"></FaBitcoin>, href: "/dashboard/donate" },
     { label: "Contact", icon: <MdOutlineMailOutline className="text-blue-400"></MdOutlineMailOutline>, href: "/dashboard/contact" },
     { label: "Sign Out", icon: <IoIosContact className="text-orange-300"></IoIosContact>, href: "/logout" },
 ]
@@ -21,9 +23,9 @@ const items = [
 export default function Appsidebar() {
     const pathname = usePathname();
   return (
-    <Sidebar>
+    <Sidebar className={"border-none"}>
         <SidebarHeader className="items-center text-2xl font-bold">
-        <span className="flex items-center gap-2">VOLARE <IoPlanet className="inline"/></span>
+        <span className="flex items-center gap-2">My Dashboard <MdDashboard className="inline"/></span>
         </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>

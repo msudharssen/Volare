@@ -24,7 +24,7 @@ export default function Page() {
    <Button variant="default" className="w-full mb-4 hover:bg-white hover:text-black cursor-pointer">Sign In <FcGoogle/></Button>
   </CardContent>
   <CardFooter>
-  <p className="text-muted-foreground text-sm text-center text-white">By Signing in, You Agree to <a href="/" className="underline">Terms and Conditions</a> </p>
+  <p className=" text-sm text-center text-white">By clicking continue, you agree to our <a href="/" className="underline">Terms of Service</a></p>
   </CardFooter>
 </Card>
   )
