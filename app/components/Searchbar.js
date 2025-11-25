@@ -62,7 +62,7 @@ export default function Searchbar() {
             <div className="text-center">
               <h1 className="text-5xl font-bold text-white inline-flex items-center gap-3">
                 VOLARE
-                <IoPlanet className="text-white animate-pulse" size={48} />
+                <IoPlanet className="text-white " size={48} />
               </h1>
             </div>
             <div className="max-w-4xl mx-auto">
