@@ -4,7 +4,6 @@ import { FaCity } from "react-icons/fa6";
 import { FaGlobeAmericas } from "react-icons/fa";
 import { FaBatteryFull } from "react-icons/fa";
 import { MdAirlines } from "react-icons/md";
-import Statscard from '@/app/components/Statscard';
 
 
 
