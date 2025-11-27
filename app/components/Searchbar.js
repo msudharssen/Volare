@@ -36,15 +36,15 @@ export default function Searchbar() {
       try {
           let path = `http://localhost:8080/flight/findflight/${fnum}/${format(date, "yyyy-MM-dd")}`;
           console.log("Full path being fetched:", path);
-            let resp =  await fetch(path, {
+            const response =  await fetch(path, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            credentials: 'include' // If you need to send cookies
+            credentials: 'include' 
             }) ;
-            let data = await resp.json()
+            let data = await response.json()
             setResults(data);
             console.log(data)
             console.log(format(date, "yyyy-MM-dd"))
@@ -52,10 +52,7 @@ export default function Searchbar() {
             console.error('Error fetching data:', error);
         }
     }
-    useEffect(() => {
-        console.log(results);
-        console.log("FROM USE EFFECT");
-    }, [results]);
+    
     return (
         <div className="w-full min-h-screen  text-black">
           <div className="w-full space-y-8 p-8">
