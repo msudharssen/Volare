@@ -57,12 +57,12 @@ export default function Searchbar() {
         console.log("FROM USE EFFECT");
     }, [results]);
     return (
-        <div className="w-full min-h-screen bg-neutral-950 text-white">
+        <div className="w-full min-h-screen  text-black">
           <div className="w-full space-y-8 p-8">
             <div className="text-center">
-              <h1 className="text-5xl font-bold text-white inline-flex items-center gap-3">
+              <h1 className="text-5xl font-bold text-stone-700 inline-flex items-center gap-3">
                 VOLARE
-                <IoPlanet className="text-white " size={48} />
+                <IoPlanet className="text-stone-700 animate-pulse" size={48} />
               </h1>
             </div>
             <div className="max-w-4xl mx-auto">
@@ -71,14 +71,14 @@ export default function Searchbar() {
                   name="flightNumberInput"
                   type="search"
                   placeholder="Enter Flight Number"
-                  className="h-12 flex-1 text-black placeholder:text-gray-500 bg-white border-white"
+                  className="h-12 flex-1 text-black placeholder:text-gray-500 border-stone-700 bg-white "
                   onChange={(e) => getInfo(e.target.value)}
                 />
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
                       variant="outline"
-                      className="h-12 px-4 bg-white text-black hover:bg-gray-100 border-white justify-start font-normal min-w-[200px]"
+                      className="h-12 px-4 bg-white text-black hover:bg-gray-100 border-stone-700 justify-start font-normal min-w-[200px]"
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
                       {date ? format(date, "PPP") : <span>Pick a date</span>}
@@ -93,7 +93,7 @@ export default function Searchbar() {
                   </PopoverContent>
                 </Popover>
                 <Button 
-                  className="h-12 px-6 cursor-pointer bg-white text-black hover:bg-gray-100" 
+                  className="h-12 px-6 cursor-pointer bg-slate-600 text-white hover:bg-white hover:text-black hover:border-black" 
                   onClick={sendResult}
                 >
                   Search

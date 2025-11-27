@@ -24,12 +24,12 @@ export default function Flightdata({ data }) {
     return (
       <>
         <div className="flex flex-col items-center gap-4">
-          <div className='flex gap-4'>
+          <div className='flex'>
           <Leftcard data={data} />
           <Middlecard data={data} />
           <Rightcard data={data} />
           </div>
-          <Button className="cursor-pointer hover:bg-amber-500 hover:text-black">Add To Valut</Button>
+          <Button className="cursor-pointer bg-gray-700 text-white">Add To Vault</Button>
         </div>
       </>
     )

@@ -25,15 +25,15 @@ export default function Middlecard({data}){
 
     if (data){
   return (
-    <Card className="w-[450px] border-orange-400 mt-10 h-[360px] bg-black">
-  <CardHeader className="h-50 bg-black text-center">
-    <CardTitle className="text-slate-50">{data.ident_iata}</CardTitle>
-    <CardDescription className={"text-white"}>{data.status}</CardDescription>
+    <Card className="w-[450px] border-slate-700  border-t border-b mt-10 h-[360px] bg-white">
+  <CardHeader className="h-50 bg-white text-center">
+    <CardTitle className="text-black">{data.ident_iata}</CardTitle>
+    <CardDescription className={"text-black"}>{data.status}</CardDescription>
   </CardHeader>
   <CardContent className="flex flex-col items-center justify-center px-8">
     <Progress 
-      className="w-full bg-amber-500 foreground-white" 
-      value={50}
+      className="w-full bg-slate-700 foreground-white" 
+      value={data.percent_complete}
     />
   </CardContent>
 </Card>
