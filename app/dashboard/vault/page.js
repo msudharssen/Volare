@@ -3,7 +3,6 @@ import { IoIosRocket } from "react-icons/io";
 import { FaCity } from "react-icons/fa6";
 import { FaGlobeAmericas } from "react-icons/fa";
 import { MdAirlines } from "react-icons/md";
-import {Button} from '../../../components/ui/button.jsx';
 
 
 
@@ -72,34 +71,35 @@ import { MD } from 'country-flag-icons/react/3x2';
 //   )
 // }
 
-export default async function findUserTrips() {
+export default async function page() {
   const url = "http://localhost:8080/find/trips";
-  let dataFromFetch = [];
-  
-  try {
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      body: JSON.stringify({ email: "alice.johnson@example.com" }),
-      cache: 'no-store'
-    });
+    let dataFromFetch = [];
     
-    console.log("Response status:", response.status);
-    
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error("Error response:", errorText);
-      throw new Error(`HTTP error! status: ${response.status}`);
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({ email: "alice.johnson@example.com" }),
+        cache: 'no-store'
+      });
+      
+      console.log("Response status:", response.status);
+      
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error("Error response:", errorText);
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      dataFromFetch = await response.json();
+      console.log("Fetched data:", dataFromFetch);
+    } catch (err) {
+      console.error("Error fetching trips data:", err);
     }
-    
-    dataFromFetch = await response.json();
-    console.log("Fetched data:", dataFromFetch);
-  } catch (err) {
-    console.error("Error fetching trips data:", err);
-  }
+
 
 
 
