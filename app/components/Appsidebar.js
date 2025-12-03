@@ -15,7 +15,7 @@ import { MdDashboard } from "react-icons/md";
 const items = [
     { label: "Search Flights", icon: <IoMdAirplane className="text-red-400"></IoMdAirplane>, href: "/dashboard/search" },
     { label: "My Vault", icon: <PiVaultBold className="text-green-500"></PiVaultBold>, href: "/dashboard/vault" },
-    { label: "Support", icon: <FaBitcoin className="text-yellow-400"></FaBitcoin>, href: "/dashboard/donate" },
+    // { label: "Support", icon: <FaBitcoin className="text-yellow-400"></FaBitcoin>, href: "/dashboard/support" },
     { label: "Contact", icon: <MdOutlineMailOutline className="text-blue-400"></MdOutlineMailOutline>, href: "/dashboard/contact" },
     { label: "Sign Out", icon: <IoIosContact className="text-orange-300"></IoIosContact>, href: "/logout" },
 ]
