@@ -21,6 +21,26 @@ const items = [
 ]
 
 export default function Appsidebar() {
+    function justPrint(toPrint){
+        console.log("Clicked", toPrint);
+    }
+    function handleSignOut() {
+        fetch('http://localhost:8080/logout', {
+            method: 'POST',
+            credentials: 'include',
+        })
+        .then(response => {
+            if (response.ok) {
+                // Redirect to login page or homepage after successful logout
+                window.location.href = '/';
+            } else {
+                console.error('Logout failed');
+            }
+        })
+        .catch(error => {
+            console.error('Error during logout:', error);
+        });
+    }
     const pathname = usePathname();
   return (
     <Sidebar className={"border-none"}>
@@ -33,7 +53,7 @@ export default function Appsidebar() {
                     {items.map(element => (
                         <SidebarMenuItem key={element.label} >
                             <Link key={element.label} href={element.href}>
-                            <SidebarMenuButton className={"cursor-pointer"} isActive={pathname === element.href}>
+                            <SidebarMenuButton onClick={handleSignOut ? element.label==='Sign Out': justPrint}className={"cursor-pointer"} isActive={pathname === element.href}>
                                 {element.icon}
                                 {element.label}
                             </SidebarMenuButton>
